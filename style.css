@@ -1,0 +1,97 @@
+* {
+  font-weight: normal;
+  font-family: "Courier New", Courier, monospace;
+}
+body {
+  padding: 0;
+  margin: 0;
+  background-image: linear-gradient(
+    to right,
+    rgb(227, 239, 255),
+    rgb(71, 106, 139)
+  );
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.calculator {
+  width: 90vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.display {
+  background-color: rgba(36, 36, 36, 0.932);
+  width: 100%;
+  min-height: 45vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: flex-end;
+  border-radius: 10px 10px 0px 0px;
+}
+.bottom-left {
+  border-radius: 0px 0px 0px 10px;
+}
+.bottom-right {
+  border-radius: 0px 0px 10px 0px;
+}
+.previous,
+.current {
+  color: rgb(255, 255, 255);
+  font-size: 2.3rem;
+  margin: 20px;
+}
+.previous {
+  font-size: 1.5rem;
+}
+.buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+button {
+  font-size: 2.5rem;
+  background-color: rgba(255, 255, 255, 0.5);
+  width: 22.5vw;
+  height: 22.5vw;
+  cursor: pointer;
+
+  border: 1px solid rgb(255, 255, 255);
+}
+button:hover {
+  background-color: rgba(255, 255, 255, 0.9);
+}
+.clear,
+.equals {
+  width: 45vw;
+}
+
+/************ Screen larger than 550px ********/
+@media (min-width: 550px) {
+  .calculator {
+    height: 90vh;
+    width: 51.428vh;
+  }
+  button {
+    font-size: 3rem;
+    width: 12.8vh;
+    height: 12.8vh;
+  }
+  .display {
+    min-height: 25.714vh;
+  }
+  .clear,
+  .equals {
+    width: 25.714vh;
+  }
+}
+@media (max-width: 410px) {
+  button {
+    font-size: 1.5rem;
+  }
+}
